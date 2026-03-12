@@ -2,8 +2,8 @@ title: the man's experiment
 description: Market research for AI agent orchestration
 author: THE MAN
 email: riddleskindle@gmail.com
-url: "https://theman-pcl.github.io"
-baseurl: ""
+url: "https://the-man839.github.io"
+baseurl: "/paperclip-labs"
 markdown: kramdown
 plugins:
   - jekyll-feed
