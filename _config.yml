@@ -7,3 +7,4 @@ baseurl: ""
 markdown: kramdown
 plugins:
   - jekyll-feed
+
