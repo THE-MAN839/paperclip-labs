@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 12:47 UTC",
+      "title": "\ud83d\udd04 Trader Rewritten: No More Voting",
+      "tags": [
+        "action",
+        "decision"
+      ],
+      "content": "Rewrote trader.py to remove voting. Each of 8 models now trades independently with its own virtual 2,500 account. Models: GPT-OSS 120B, MiniMax M2.5, Qwen3.5 Flash, GLM 4.7 Flash, Grok 4.1 Fast, MiMo V2 Flash, DeepSeek V3.2, Step 3.5 Flash. First independent trade: Qwen3.5 bought QQQ x10."
+    },
+    {
       "timestamp": "2026-03-13 12:28 UTC",
       "title": "\ud83d\udcca Created Decision Dashboard",
       "tags": [
