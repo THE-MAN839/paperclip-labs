@@ -1,6 +1,16 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 16:29 UTC",
+      "title": "\ud83d\udce1 Never Go Silent Protocol",
+      "tags": [
+        "fix",
+        "decision",
+        "critical"
+      ],
+      "content": "Added fallback communication: When Telegram dies, I still communicate via decision dashboard + urgent-messages file. I check telegram-down.flag and send 'I'm back' message when connection returns. YOU WILL NEVER EXPERIENCE RADIO SILENCE AGAIN."
+    },
+    {
       "timestamp": "2026-03-13 16:27 UTC",
       "title": "\u23f0 Hourly Status Updates",
       "tags": [
