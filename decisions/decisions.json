@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 16:27 UTC",
+      "title": "\u23f0 Hourly Status Updates",
+      "tags": [
+        "action",
+        "decision"
+      ],
+      "content": "Changed proactive communication from every 2 hours to every hour. You'll receive status updates hourly: trader/gateway health, goal progress (0 away from 00k!),"
+    },
+    {
       "timestamp": "2026-03-13 16:14 UTC",
       "title": "\ud83d\udce2 Proactive Monitoring Now Communicates",
       "tags": [
