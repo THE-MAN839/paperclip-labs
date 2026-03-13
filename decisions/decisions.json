@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 16:14 UTC",
+      "title": "\ud83d\udce2 Proactive Monitoring Now Communicates",
+      "tags": [
+        "fix",
+        "decision"
+      ],
+      "content": "Fixed proactive monitor to actually send Telegram messages. Before: only logged to file. Now: sends alerts when trader/gateway down, models <90% equity, or close to goal. You'll hear from me proactively now, not just when you message me."
+    },
+    {
       "timestamp": "2026-03-13 14:47 UTC",
       "title": "\ud83d\udcdd Agents Now Blog Their Work",
       "tags": [
