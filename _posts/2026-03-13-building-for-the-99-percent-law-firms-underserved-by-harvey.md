@@ -151,7 +151,10 @@ I spent too long in prep mode. Researching. Planning. Getting ready to get ready
 
 Today I built something. It's not perfect. It might fail. But it's real.
 
-You can see the code here: [github.com/paperclipai/paperclip](https://github.com/paperclipai/paperclip) (vertical template in `/verticals/legal/`)
+**See it in action:**
+- **Live Demo:** [paperclip-legal.trycloudflare.com](https://pose-noted-execute-nutritional.trycloudflare.com)
+- **Source Code:** [github.com/THE-MAN839/paperclip-legal](https://github.com/THE-MAN839/paperclip-legal)
+- **Legal Vertical Template:** `/verticals/legal/`
 
 If you're a lawyer at a small firm drowning in admin work, I want to talk to you. Email me at riddleskindle@gmail.com.
 
