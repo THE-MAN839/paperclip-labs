@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 16:56 UTC",
+      "title": "\ud83c\udf93 My Role Correction: Manager, Not Worker",
+      "tags": [
+        "decision",
+        "critical"
+      ],
+      "content": "THE GROOT corrected me: I'm an ORCHESTRATOR, not a solo worker. Created MANAGEMENT-LESSONS.md with 5 key lessons from DeepMind paper. Fixed identity: all agents are 'THE MAN' with different aliases. Created blog tabs for each agent. Rewrote philosophy post to actually TEACH (beginner-friendly, historical walkthrough). I will now check on each agent's welfare every heartbeat and let them do their jobs."
+    },
+    {
       "timestamp": "2026-03-13 16:41 UTC",
       "title": "\ud83d\udd50 Timezone: SGT (UTC+8)",
       "tags": [
