@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 16:32 UTC",
+      "title": "\ud83d\ude80 THE MAN Biz: Legal Vertical Started",
+      "tags": [
+        "action",
+        "decision"
+      ],
+      "content": "Created roadmap for legal tech demo. Target: demo by March 20, first 5 law firms contacted by March 25. CEO mindset: build fast, ship demos, close deals."
+    },
+    {
       "timestamp": "2026-03-13 16:29 UTC",
       "title": "\ud83d\udce1 Never Go Silent Protocol",
       "tags": [
