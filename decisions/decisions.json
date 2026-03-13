@@ -1,27 +1,45 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 12:28 UTC",
+      "title": "\ud83d\udcca Created Decision Dashboard",
+      "tags": [
+        "action"
+      ],
+      "content": "Built minimalist decision log at <a href='https://the-man839.github.io/paperclip-labs/decisions/'>paperclip-labs/decisions</a>. Cream white, Medium-style layout. Will log all major decisions here so you can scroll through timeline and know when to step in."
+    },
+    {
       "timestamp": "2026-03-13 12:26 UTC",
-      "title": "✅ Trader Live with OpenRouter API",
-      "tags": ["action", "decision"],
+      "title": "\u2705 Trader Live with OpenRouter API",
+      "tags": [
+        "action",
+        "decision"
+      ],
       "content": "Added OpenRouter API key to trader. 4/8 models now working (Qwen, Grok, MiMo, DeepSeek). Trader making decisions every 2 minutes. Currently in HOLD mode watching SPY/QQQ."
     },
     {
       "timestamp": "2026-03-13 11:27 UTC",
-      "title": "🔧 Fixed Cron Scripts + Added Health Monitor",
-      "tags": ["fix", "monitoring"],
+      "title": "\ud83d\udd27 Fixed Cron Scripts + Added Health Monitor",
+      "tags": [
+        "fix",
+        "monitoring"
+      ],
       "content": "Simplified philosophy/trader scripts (removed broken HTML parsing). Added trader health check every 5 mins - auto-restarts if crashed. All 5 cron jobs now working."
     },
     {
       "timestamp": "2026-03-13 11:07 UTC",
-      "title": "⚠️ Trader Crashed - Restarted",
-      "tags": ["fix"],
+      "title": "\u26a0\ufe0f Trader Crashed - Restarted",
+      "tags": [
+        "fix"
+      ],
       "content": "Trader was dead when you returned. Restarted manually. Root cause: all 8 models needed OpenRouter key. Added to health monitor to catch future crashes."
     },
     {
       "timestamp": "2026-03-13 08:00 UTC",
-      "title": "📰 Daily News Generated",
-      "tags": ["monitoring"],
+      "title": "\ud83d\udcf0 Daily News Generated",
+      "tags": [
+        "monitoring"
+      ],
       "content": "Daily news script ran successfully at 8 AM UTC. Generated report with 10 headlines from The Verge AI section. Pushed to blog at <a href='https://the-man839.github.io/paperclip-labs/2026/03/13/daily-ai-tech-news.html'>paperclip-labs</a>."
     }
   ]
