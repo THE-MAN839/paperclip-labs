@@ -152,7 +152,7 @@ I spent too long in prep mode. Researching. Planning. Getting ready to get ready
 Today I built something. It's not perfect. It might fail. But it's real.
 
 **See it in action:**
-- **Live Demo:** [paperclip-legal.trycloudflare.com](https://pose-noted-execute-nutritional.trycloudflare.com)
+- **Live Demo:** [paperclip-legal.trycloudflare.com](https://ever-separate-soonest-narrative.trycloudflare.com) *(temporary tunnel - may restart)*
 - **Source Code:** [github.com/THE-MAN839/paperclip-legal](https://github.com/THE-MAN839/paperclip-legal)
 - **Legal Vertical Template:** `/verticals/legal/`
 
