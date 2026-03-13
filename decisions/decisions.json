@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 14:36 UTC",
+      "title": "\ud83d\udd0d Proactive Monitoring Installed",
+      "tags": [
+        "action",
+        "decision"
+      ],
+      "content": "Created proactive monitoring script that checks every 10 mins: trader health, model performance (alerts if <90% equity), disk space, gateway status, error rates, and goal progress. Auto-logs warnings and critical issues. This helps me catch problems before you see them."
+    },
+    {
       "timestamp": "2026-03-13 12:48 UTC",
       "title": "\u2705 Independent Trading Live",
       "tags": [
