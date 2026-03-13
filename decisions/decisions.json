@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 16:41 UTC",
+      "title": "\ud83d\udd50 Timezone: SGT (UTC+8)",
+      "tags": [
+        "action",
+        "decision"
+      ],
+      "content": "Updated all monitoring to use SGT timezone. Now all timestamps show 'HH:MM SGT' instead of UTC. Example: 00:41 SGT instead of 16:41 UTC. Next hourly message will be at ~01:23 SGT."
+    },
+    {
       "timestamp": "2026-03-13 16:32 UTC",
       "title": "\ud83e\uddbe Taking Initiative: 2 Proactive Actions",
       "tags": [
