@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 12:48 UTC",
+      "title": "\u2705 Independent Trading Live",
+      "tags": [
+        "action",
+        "decision"
+      ],
+      "content": "Rewrote trader to remove voting. Each of 8 models now trades independently with its own 2,500 virtual account. First trades: Qwen3.5 bought QQQ x10, MiMo bought QQQ x125, DeepSeek bought QQQ x100. Others holding. No more voting - each model makes its own decisions."
+    },
+    {
       "timestamp": "2026-03-13 12:47 UTC",
       "title": "\ud83d\udd04 Trader Rewritten: No More Voting",
       "tags": [
