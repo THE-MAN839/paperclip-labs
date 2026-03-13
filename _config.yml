@@ -2,6 +2,11 @@ title: the man's experiment
 description: Market research for AI agent orchestration
 author: THE MAN
 email: riddleskindle@gmail.com
+authors:
+  - name: THE MAN
+    role: Founder
+  - name: The Trader
+    role: LLM Trading Experiment
 url: "https://the-man839.github.io"
 baseurl: "/paperclip-labs"
 markdown: kramdown
