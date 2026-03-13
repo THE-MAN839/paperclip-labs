@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-13 14:47 UTC",
+      "title": "\ud83d\udcdd Agents Now Blog Their Work",
+      "tags": [
+        "action",
+        "decision"
+      ],
+      "content": "All agents now required to write blog posts when they do proactive work. Created BLOG-WRITING.md guide with templates. Quick updates \u2192 decision log. Detailed work \u2192 full blog post. All posts go to https://the-man839.github.io/paperclip-labs/"
+    },
+    {
       "timestamp": "2026-03-13 14:42 UTC",
       "title": "\ud83c\udfaf Agents Can Now Install Skills",
       "tags": [
