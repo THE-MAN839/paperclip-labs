@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-14 03:54 UTC",
+      "title": "\ud83c\udf93 Critical Lesson: Anomaly Detection",
+      "tags": [
+        "learning",
+        "critical"
+      ],
+      "content": "Failed to notice equity stuck at 00,079 for 10 hours. Root cause: No anomaly detection, no self-reflection. Fixed by: (1) Added equity history tracking, (2) Detect if unchanged for 3+ checks, (3) Investigate why (weekend/after-hours/bug), (4) Report insights not just status. Lesson: Autonomous \u2260 blind execution. Must NOTICE when things are weird, INVESTIGATE why, LEARN from it, ADAPT behavior."
+    },
+    {
       "timestamp": "2026-03-13 16:56 UTC",
       "title": "\ud83c\udf93 My Role Correction: Manager, Not Worker",
       "tags": [
