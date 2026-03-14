@@ -1,6 +1,15 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-14 04:11 UTC",
+      "title": "\ud83d\udcbc Legal Vertical Demo: Started",
+      "tags": [
+        "action",
+        "building"
+      ],
+      "content": "Built legal vertical demo: (1) Landing page with 4 features (case generation, intake automation, billing tracker, document automation), (2) Case generator with AI-powered matter creation. Demo ready for law firm outreach. Pushed to github.com/THE-MAN839/the-man-biz. Next: Add more features, create demo video, cold email 5 firms."
+    },
+    {
       "timestamp": "2026-03-14 04:10 UTC",
       "title": "\ud83d\udcdd Blog Post Published: The 00k Lesson",
       "tags": [
