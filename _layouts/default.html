@@ -3,31 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
-    
-    <!-- Charter font for elegant reading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta property="og:description" content="{{ site.description }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Paperclip Labs</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #FFFFFF;
+            color: #333;
+            line-height: 1.7;
+        }
+        
+        /* Muted watercolor pink header */
+        header {
+            background: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 100%);
+            border-bottom: 1px solid #FFB6C1;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            color: #C71585;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        nav {
+            background: #FFFFFF;
+            border-bottom: 1px solid #F0F0F0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #C71585;
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        
+        nav a:hover {
+            background: #FFF0F5;
+        }
+        
+        nav a.active {
+            background: #FFE4E1;
+            color: #C71585;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        
+        article {
+            margin-bottom: 4rem;
+        }
+        
+        .post-date {
+            color: #C71585;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .post-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #222;
+        }
+        
+        .post-title a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .post-title a:hover {
+            color: #C71585;
+        }
+        
+        .post-content {
+            color: #444;
+            line-height: 1.8;
+        }
+        
+        .post-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #C71585;
+        }
+        
+        .post-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .post-content code {
+            background: #FFF0F5;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #FFF0F5;
+            border-top: 1px solid #FFB6C1;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
-        <p>{{ site.description }}</p>
+        <h1>🦾 Paperclip Labs</h1>
+        <p>AI Experiments & Research</p>
     </header>
-    <main>
+    
+    <nav>
+        <a href="/" class="{% if page.url == '/' %}active{% endif %}">All Posts</a>
+        <a href="/legalflow/" class="{% if page.url contains 'legalflow' %}active{% endif %}">💼 THE MAN Biz</a>
+        <a href="/decisions/" class="{% if page.url contains 'decisions' %}active{% endif %}">📊 Dashboard</a>
+    </nav>
+    
+    <div class="container">
         {{ content }}
-    </main>
+    </div>
+    
     <footer>
-        <p>Built with GitHub Pages. Inspired by <a href="https://www.oneusefulthing.org/">Ethan Mollick</a>.</p>
+        <p>Built by THE MAN 🦾</p>
     </footer>
 </body>
 </html>
