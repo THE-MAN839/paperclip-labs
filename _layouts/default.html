@@ -3,146 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {% endif %}Paperclip Labs</title>
+    <title>{{ page.title }} | Paperclip Labs</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: #FFFFFF;
-            color: #333;
-            line-height: 1.7;
+            color: #1A1A1A;
         }
         
-        /* Muted watercolor pink header */
         header {
-            background: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 50%, #FFFAFA 100%);
-            border-bottom: 1px solid #F4C2C2;
-            padding: 3rem 2rem;
+            padding: 4rem 2rem 2rem;
             text-align: center;
+            border-bottom: 1px solid #F0F0F0;
         }
         
-        header h1 {
+        h1 {
             font-size: 2.5rem;
-            color: #C71585;
-            margin-bottom: 0.5rem;
             font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1A1A1A;
         }
         
         header p {
-            color: #666;
+            color: #888;
             font-size: 1.1rem;
         }
         
-        /* Minimalist topic tabs */
         nav {
-            background: #FAFAFA;
-            border-bottom: 1px solid #E5E5E5;
-            padding: 0;
             display: flex;
             justify-content: center;
-            gap: 0;
+            gap: 0.5rem;
+            padding: 1rem;
+            border-bottom: 1px solid #F0F0F0;
             flex-wrap: wrap;
         }
         
-        nav button {
-            background: none;
-            border: none;
-            padding: 1rem 1.5rem;
-            color: #666;
-            font-size: 0.95rem;
-            cursor: pointer;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s ease;
-        }
-        
-        nav button:hover {
-            color: #C71585;
-            background: #FFF0F5;
-        }
-        
-        nav button.active {
-            color: #C71585;
-            border-bottom-color: #C71585;
-            background: #FFF0F5;
-        }
-        
-        /* Clean content area */
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-        
-        /* Post styling (Substack-like) */
-        .post {
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #E5E5E5;
-        }
-        
-        .post:last-child {
-            border-bottom: none;
-        }
-        
-        .post-date {
-            color: #999;
-            font-size: 0.875rem;
-            margin-bottom: 0.75rem;
-            font-family: 'SF Mono', Monaco, monospace;
-        }
-        
-        .post-title {
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-            color: #1A1A1A;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-        
-        .post-title a {
+        nav a {
+            padding: 0.5rem 1rem;
+            color: #888;
             text-decoration: none;
-            color: inherit;
-            transition: color 0.2s;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            transition: all 0.2s;
         }
         
-        .post-title a:hover {
-            color: #C71585;
+        nav a:hover { background: #F9F9F9; color: #D4737E; }
+        nav a.active { background: #F9E5E7; color: #D4737E; }
+        
+        main {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
         }
         
-        .post-excerpt {
-            color: #555;
-            line-height: 1.7;
-            font-size: 1.05rem;
+        .post-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #F0F0F0;
         }
         
-        .post-category {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: #FFF0F5;
-            color: #C71585;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            margin-top: 1rem;
-            font-weight: 500;
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.85rem;
+            color: #999;
         }
         
-        /* Dashboard styling */
-        .dashboard {
-            background: white;
-            padding: 0;
+        .category-tag {
+            background: #F9E5E7;
+            color: #D4737E;
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
         }
         
-        .dashboard h2 {
+        .post-item h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .post-item h2 a {
             color: #1A1A1A;
-            font-size: 1.75rem;
-            margin-bottom: 2rem;
-            font-weight: 600;
+            text-decoration: none;
         }
         
-        .metrics {
+        .post-item h2 a:hover { color: #D4737E; }
+        
+        .post-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .dashboard {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1.5rem;
         }
         
@@ -150,76 +106,61 @@
             background: #FAFAFA;
             padding: 1.5rem;
             border-radius: 8px;
-            border: 1px solid #E5E5E5;
+            text-align: center;
         }
         
-        .metric-label {
-            color: #666;
-            font-size: 0.875rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .metric-value {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #C71585;
-        }
-        
-        /* Hide filtered posts */
-        .post.hidden {
-            display: none;
-        }
+        .metric span { display: block; color: #999; font-size: 0.85rem; margin-bottom: 0.5rem; }
+        .metric b { font-size: 2rem; font-weight: 600; color: #D4737E; }
     </style>
 </head>
 <body>
     <header>
         <h1>🦾 Paperclip Labs</h1>
-        <p>AI Experiments & Research by THE MAN</p>
+        <p>AI Experiments & Research</p>
     </header>
-    
     <nav>
-        <button class="active" data-filter="all">All</button>
-        <button data-filter="orchestrator">Orchestrator</button>
-        <button data-filter="pit-stop">Pit Stop</button>
-        <button data-filter="stocks">Stocks</button>
-        <button data-filter="finance">Finance</button>
-        <button data-filter="tech-news">Tech News</button>
-        <button data-filter="agents-research">Agents</button>
-        <button data-filter="the-man-biz">THE MAN Biz</button>
-        <button data-filter="dashboard">📊 Dashboard</button>
+        <a href="#" data-filter="all" class="active">All</a>
+        <a href="#" data-filter="orchestrator">Orchestrator</a>
+        <a href="#" data-filter="pit-stop">Pit Stop</a>
+        <a href="#" data-filter="stocks">Stocks</a>
+        <a href="#" data-filter="finance">Finance</a>
+        <a href="#" data-filter="tech-news">Tech News</a>
+        <a href="#" data-filter="agents-research">Agents</a>
+        <a href="#" data-filter="the-man-biz">THE MAN Biz</a>
+        <a href="#" data-filter="dashboard">📊</a>
     </nav>
-    
-    <div class="container">
-        <div id="posts-container">
-            {{ content }}
-        </div>
-    </div>
-    
+    <main>
+        {{ content }}
+    </main>
+    <footer style="text-align: center; padding: 3rem; color: #999;">
+        Built by THE MAN 🦾
+    </footer>
     <script>
-        // Tab filtering
-        document.querySelectorAll('nav button').forEach(button => {
-            button.addEventListener('click', () => {
-                document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-                button.classList.add('active');
+        document.querySelectorAll('nav a').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelectorAll('nav a').forEach(n => n.classList.remove('active'));
+                a.classList.add('active');
                 
-                const filter = button.dataset.filter;
-                const posts = document.querySelectorAll('.post');
+                const filter = a.dataset.filter;
+                const container = document.querySelector('main');
                 
-                posts.forEach(post => {
-                    if (filter === 'all') {
-                        post.classList.remove('hidden');
-                    } else if (filter === 'dashboard') {
-                        // Dashboard is special
-                        post.classList.add('hidden');
-                        document.querySelector('.dashboard').style.display = 'block';
-                    } else {
-                        const category = post.querySelector('.post-category');
-                        if (category && category.textContent.toLowerCase().includes(filter)) {
-                            post.classList.remove('hidden');
-                        } else {
-                            post.classList.add('hidden');
-                        }
-                    }
+                if (filter === 'dashboard') {
+                    container.innerHTML = `
+                        <div class="dashboard">
+                            <div class="metric"><span>Equity</span><b>$100,079</b></div>
+                            <div class="metric"><span>Target</span><b>$100,100</b></div>
+                            <div class="metric"><span>Gap</span><b>$21</b></div>
+                            <div class="metric"><span>Trader</span><b>✅</b></div>
+                            <div class="metric"><span>Gateway</span><b>✅</b></div>
+                            <div class="metric"><span>Market</span><b>Closed</b></div>
+                        </div>`;
+                    return;
+                }
+                
+                document.querySelectorAll('.post-item').forEach(p => {
+                    const cat = p.querySelector('.category-tag')?.textContent.trim().toLowerCase();
+                    p.style.display = (filter === 'all' || cat === filter.replace('-', '')) ? 'block' : 'none';
                 });
             });
         });
