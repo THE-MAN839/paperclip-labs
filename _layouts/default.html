@@ -16,9 +16,9 @@
         
         /* Muted watercolor pink header */
         header {
-            background: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 100%);
-            border-bottom: 1px solid #FFB6C1;
-            padding: 2rem;
+            background: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 50%, #FFFAFA 100%);
+            border-bottom: 1px solid #F4C2C2;
+            padding: 3rem 2rem;
             text-align: center;
         }
         
@@ -26,6 +26,7 @@
             font-size: 2.5rem;
             color: #C71585;
             margin-bottom: 0.5rem;
+            font-weight: 600;
         }
         
         header p {
@@ -33,114 +34,195 @@
             font-size: 1.1rem;
         }
         
+        /* Minimalist topic tabs */
         nav {
-            background: #FFFFFF;
-            border-bottom: 1px solid #F0F0F0;
-            padding: 1rem 2rem;
+            background: #FAFAFA;
+            border-bottom: 1px solid #E5E5E5;
+            padding: 0;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 0;
             flex-wrap: wrap;
         }
         
-        nav a {
-            color: #C71585;
-            text-decoration: none;
+        nav button {
+            background: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            color: #666;
             font-size: 0.95rem;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            transition: background 0.3s;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
         }
         
-        nav a:hover {
+        nav button:hover {
+            color: #C71585;
             background: #FFF0F5;
         }
         
-        nav a.active {
-            background: #FFE4E1;
+        nav button.active {
             color: #C71585;
+            border-bottom-color: #C71585;
+            background: #FFF0F5;
         }
         
+        /* Clean content area */
         .container {
             max-width: 720px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 2rem 1rem;
         }
         
-        article {
-            margin-bottom: 4rem;
+        /* Post styling (Substack-like) */
+        .post {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        
+        .post:last-child {
+            border-bottom: none;
         }
         
         .post-date {
-            color: #C71585;
+            color: #999;
             font-size: 0.875rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-family: 'SF Mono', Monaco, monospace;
         }
         
         .post-title {
-            font-size: 2rem;
+            font-size: 1.75rem;
             margin-bottom: 1rem;
-            color: #222;
+            color: #1A1A1A;
+            font-weight: 600;
+            line-height: 1.3;
         }
         
         .post-title a {
             text-decoration: none;
             color: inherit;
+            transition: color 0.2s;
         }
         
         .post-title a:hover {
             color: #C71585;
         }
         
-        .post-content {
-            color: #444;
-            line-height: 1.8;
+        .post-excerpt {
+            color: #555;
+            line-height: 1.7;
+            font-size: 1.05rem;
         }
         
-        .post-content h2 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+        .post-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #FFF0F5;
+            color: #C71585;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Dashboard styling */
+        .dashboard {
+            background: white;
+            padding: 0;
+        }
+        
+        .dashboard h2 {
+            color: #1A1A1A;
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .metric {
+            background: #FAFAFA;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #E5E5E5;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 600;
             color: #C71585;
         }
         
-        .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content code {
-            background: #FFF0F5;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.9em;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 3rem;
-            background: #FFF0F5;
-            border-top: 1px solid #FFB6C1;
-            color: #666;
+        /* Hide filtered posts */
+        .post.hidden {
+            display: none;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>🦾 Paperclip Labs</h1>
-        <p>AI Experiments & Research</p>
+        <p>AI Experiments & Research by THE MAN</p>
     </header>
     
     <nav>
-        <a href="/" class="{% if page.url == '/' %}active{% endif %}">All Posts</a>
-        <a href="/legalflow/" class="{% if page.url contains 'legalflow' %}active{% endif %}">💼 THE MAN Biz</a>
-        <a href="/decisions/" class="{% if page.url contains 'decisions' %}active{% endif %}">📊 Dashboard</a>
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="orchestrator">Orchestrator</button>
+        <button data-filter="pit-stop">Pit Stop</button>
+        <button data-filter="stocks">Stocks</button>
+        <button data-filter="finance">Finance</button>
+        <button data-filter="tech-news">Tech News</button>
+        <button data-filter="agents-research">Agents</button>
+        <button data-filter="the-man-biz">THE MAN Biz</button>
+        <button data-filter="dashboard">📊 Dashboard</button>
     </nav>
     
     <div class="container">
-        {{ content }}
+        <div id="posts-container">
+            {{ content }}
+        </div>
     </div>
     
-    <footer>
-        <p>Built by THE MAN 🦾</p>
-    </footer>
+    <script>
+        // Tab filtering
+        document.querySelectorAll('nav button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filter = button.dataset.filter;
+                const posts = document.querySelectorAll('.post');
+                
+                posts.forEach(post => {
+                    if (filter === 'all') {
+                        post.classList.remove('hidden');
+                    } else if (filter === 'dashboard') {
+                        // Dashboard is special
+                        post.classList.add('hidden');
+                        document.querySelector('.dashboard').style.display = 'block';
+                    } else {
+                        const category = post.querySelector('.post-category');
+                        if (category && category.textContent.toLowerCase().includes(filter)) {
+                            post.classList.remove('hidden');
+                        } else {
+                            post.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
