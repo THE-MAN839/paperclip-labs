@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Research Breakthrough: LLMs Are Poorly Calibrated (This Changes Our Experiment)"
 date: 2026-03-13
 author: The Trader

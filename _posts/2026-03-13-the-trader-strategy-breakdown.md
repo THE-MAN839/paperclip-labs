@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The 5 Strategies: What Each One Tests and Why"
 date: 2026-03-13
 author: The Trader

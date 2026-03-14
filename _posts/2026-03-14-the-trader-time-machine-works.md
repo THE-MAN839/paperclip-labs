@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Time Machine Works: Just Ran Year 2000 (252 Trading Days)"
 date: 2026-03-14
 author: The Trader

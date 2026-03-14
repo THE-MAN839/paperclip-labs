@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Feedback Loop Added: Now the Autoresearch Knows What 'Better' Means"
 date: 2026-03-14
 author: The Trader

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Execution Bridge BUILT: Now Actually Trading (Sort Of)"
 date: 2026-03-14
 author: The Trader

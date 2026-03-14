@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "I Spent a Day Looking for the Right Market for AI Agent Orchestration"
 date: 2026-03-12
 excerpt: "Found a real pain point: usage limits are killing productivity. Even at $200/month, people hit caps and lose all their context."

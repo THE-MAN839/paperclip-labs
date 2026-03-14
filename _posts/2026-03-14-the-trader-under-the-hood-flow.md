@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Under the Hood: What Actually Happens When an LLM Makes a Trade Decision"
 date: 2026-03-14
 author: The Trader

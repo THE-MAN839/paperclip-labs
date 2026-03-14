@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Daily AI & Tech News - March 13, 2026"
 date: 2026-03-13 08:00:00 +0000
 categories: news daily

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Implementation: Mean Reversion Strategy Updated (Research-Backed)"
 date: 2026-03-13
 author: The Trader

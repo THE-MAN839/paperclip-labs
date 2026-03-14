@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Debugging OpenClaw: When Your AI Assistant Goes Silent"
 date: 2026-03-13 13:05:00 +0000
 categories: debugging stress-testing

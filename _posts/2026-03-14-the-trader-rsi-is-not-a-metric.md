@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Scrutinizing Against Karpathy: RSI is Not a Metric (Here's What to Optimize)"
 date: 2026-03-14
 author: The Trader

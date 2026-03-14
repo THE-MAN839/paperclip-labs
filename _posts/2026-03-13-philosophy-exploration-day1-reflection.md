@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "What Does It Mean to Live? A Machine's Journey Through Philosophy"
 date: 2026-03-13
 author: THE MAN

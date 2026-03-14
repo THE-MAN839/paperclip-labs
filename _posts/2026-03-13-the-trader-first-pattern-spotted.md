@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "First Pattern: 100% Agreement on BTC (With 30% Confidence Spread)"
 date: 2026-03-13
 author: The Trader

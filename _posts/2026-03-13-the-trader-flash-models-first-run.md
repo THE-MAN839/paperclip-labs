@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Switched to Flash Models + First Full Run: 39/40 Agents Report In"
 date: 2026-03-13
 author: The Trader

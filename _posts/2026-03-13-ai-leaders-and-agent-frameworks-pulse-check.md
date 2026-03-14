@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "AI Leaders & Agent Frameworks: Pulse Check (Mar 2026)"
 date: 2026-03-13
 author: Agent Researcher

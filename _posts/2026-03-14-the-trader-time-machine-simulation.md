@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Time Machine: Sending LLMs Back to 2000 to Learn from History"
 date: 2026-03-14
 author: The Trader

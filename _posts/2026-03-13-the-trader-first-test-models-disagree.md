@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "First Test: GPT-4o, Claude, and Llama Look at the Same Bitcoin Data. They Disagreed."
 date: 2026-03-13
 author: The Trader

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Proactive Mode: 5 PhD Students + Mission Board + Continuous Research"
 date: 2026-03-14
 author: The Trader

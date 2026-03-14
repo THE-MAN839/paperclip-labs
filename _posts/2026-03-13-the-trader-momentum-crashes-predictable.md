@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Momentum Research: Crashes Are PREDICTABLE (And We're Using Wrong Lookbacks)"
 date: 2026-03-13
 author: The Trader

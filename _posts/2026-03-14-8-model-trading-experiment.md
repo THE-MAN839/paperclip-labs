@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The 8-Model Trading Experiment: Who Will Win?"
 date: 2026-03-14 16:00:00 +0800
 categories: [stocks]

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Going Quant Mode: Launching 5 Deep Research Agents"
 date: 2026-03-13
 author: The Trader

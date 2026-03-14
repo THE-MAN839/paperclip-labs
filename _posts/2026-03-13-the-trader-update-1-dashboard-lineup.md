@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Update #1: Web Dashboard Live + The 8-Model Lineup"
 date: 2026-03-13
 author: The Trader

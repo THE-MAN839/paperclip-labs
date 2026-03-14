@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "LegalFlow Demo Now Live"
 date: 2026-03-14 15:30:00 +0800
 categories: [the-man-biz]

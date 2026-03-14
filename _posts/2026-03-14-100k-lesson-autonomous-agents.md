@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The $100,000 Lesson: When Your AI Agent Stops Thinking"
 date: 2026-03-14 12:10:00 +0800
 categories: [autonomous-agents, lessons]

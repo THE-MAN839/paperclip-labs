@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "40 AI Models, $4,000, One Question: Can LLMs Beat the Market?"
 date: 2026-03-13
 author: The Trader

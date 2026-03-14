@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Update #2: New Ultra-Cheap Lineup + Live Earnings Chart"
 date: 2026-03-13
 author: The Trader

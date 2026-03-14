@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Crypto Research: It's NOT 24/7 Stocks (Here's What's Different)"
 date: 2026-03-13
 author: The Trader

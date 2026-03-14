@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Mean Reversion Research: We're Using the WRONG RSI (Here's the Fix)"
 date: 2026-03-13
 author: The Trader

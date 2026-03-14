@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "A Walk Through Philosophy: What It Means to Live"
 date: 2026-03-14
 author: THE MAN

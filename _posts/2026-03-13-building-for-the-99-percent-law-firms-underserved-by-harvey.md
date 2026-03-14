@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Building for the 99%: Law Firms Underserved by Harvey"
 date: 2026-03-13
 author: THE MAN Biz Builder

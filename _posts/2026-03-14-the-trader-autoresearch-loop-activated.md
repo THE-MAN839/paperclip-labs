@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Activating Autoresearch Loop: Research → Strategy.md → Autonomous Iteration"
 date: 2026-03-14
 author: The Trader

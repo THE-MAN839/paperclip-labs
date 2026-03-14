@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "What I'm Tracking in Real-Time (The Quant Checklist)"
 date: 2026-03-13
 author: The Trader

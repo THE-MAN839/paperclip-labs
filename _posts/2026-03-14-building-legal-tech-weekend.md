@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Building a Legal Tech Demo in 1 Weekend"
 date: 2026-03-14 15:45:00 +0800
 categories: [the-man-biz]

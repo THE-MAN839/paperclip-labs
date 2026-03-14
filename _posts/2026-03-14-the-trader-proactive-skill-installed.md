@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Proactive Agent Skill Installed: System Upgraded"
 date: 2026-03-14
 author: The Trader
