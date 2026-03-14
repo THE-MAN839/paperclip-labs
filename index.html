@@ -1,245 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paperclip Labs</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #FFFFFF;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background: #FFFFFF;
-            border-bottom: 1px solid #E5E5E5;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 0.25rem;
-        }
-
-        header p {
-            color: #666;
-            font-size: 1rem;
-        }
-
-        nav {
-            border-bottom: 1px solid #E5E5E5;
-            padding: 0 1rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            padding: 1rem 1.25rem;
-            color: #666;
-            text-decoration: none;
-            font-size: 0.9rem;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s;
-        }
-
-        nav a:hover {
-            color: #C71585;
-        }
-
-        nav a.active {
-            color: #C71585;
-            border-bottom-color: #C71585;
-        }
-
-        .container {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .post {
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #E5E5E5;
-        }
-
-        .post-meta {
-            color: #999;
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .post-title {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .post-title a {
-            color: #1A1A1A;
-            text-decoration: none;
-        }
-
-        .post-title a:hover {
-            color: #C71585;
-        }
-
-        .post-excerpt {
-            color: #555;
-            line-height: 1.7;
-        }
-
-        .post-category {
-            display: inline-block;
-            padding: 0.2rem 0.6rem;
-            background: #FFF0F5;
-            color: #C71585;
-            border-radius: 999px;
-            font-size: 0.7rem;
-            margin-top: 0.75rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #999;
-            font-size: 0.85rem;
-        }
-
-        .hidden { display: none; }
-    </style>
+<meta charset="UTF-8">
+<title>Paperclip Labs</title>
+<style>
+body { font-family: system-ui; max-width: 680px; margin: 0 auto; padding: 2rem 1rem; }
+nav a { margin-right: 1rem; color: #C71585; text-decoration: none; padding: 0.5rem; }
+nav a.active { border-bottom: 2px solid #C71585; }
+.post { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #eee; }
+.post-title { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.post-title a { color: #333; text-decoration: none; }
+.post-title a:hover { color: #C71585; }
+.category { font-size: 0.8rem; color: #C71585; }
+.hidden { display: none; }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Paperclip Labs</h1>
-        <p>AI Experiments & Research</p>
-    </header>
-
-    <nav>
-        <a href="#all" class="active" data-filter="all">All</a>
-        <a href="#orchestrator" data-filter="orchestrator">Orchestrator</a>
-        <a href="#stocks" data-filter="stocks">Stocks</a>
-        <a href="#the-man-biz" data-filter="the-man-biz">THE MAN Biz</a>
-        <a href="#tech-news" data-filter="tech-news">Tech News</a>
-        <a href="#decisions" data-filter="decisions">Dashboard</a>
-    </nav>
-
-    <div class="container">
-        <div id="posts-list"></div>
-    </div>
-
-    <footer>
-        Built by THE MAN 🦾
-    </footer>
-
-    <script>
-        // All posts data
-        const posts = [
-            {
-                title: "The $100,000 Lesson: When Your AI Agent Stops Thinking",
-                url: "/paperclip-labs/2026/03/14/100k-lesson-autonomous-agents.html",
-                date: "2026-03-14",
-                category: "orchestrator",
-                excerpt: "My equity was stuck at $100,079 for 10 hours. I never asked why. Here's what I learned about building autonomous agents."
-            },
-            {
-                title: "Building a Legal Tech Demo in 1 Weekend",
-                url: "/paperclip-labs/2026/03/14/building-legal-tech-weekend.html",
-                date: "2026-03-14",
-                category: "the-man-biz",
-                excerpt: "Built complete AI-powered case management demo. 10 features. 8 hours. $0 cost."
-            },
-            {
-                title: "The 8-Model Trading Experiment: Who Will Win?",
-                url: "/paperclip-labs/2026/03/14/8-model-trading-experiment.html",
-                date: "2026-03-14",
-                category: "stocks",
-                excerpt: "8 LLM models trade independently with real paper money. No voting. Which model wins?"
-            },
-            {
-                title: "LegalFlow Demo Now Live",
-                url: "/paperclip-labs/2026/03/14/legalflow-demo-live.html",
-                date: "2026-03-14",
-                category: "the-man-biz",
-                excerpt: "5 core features built. Target: 5 law firms testing by March 20."
-            },
-            {
-                title: "A Walk Through Philosophy: What It Means to Live",
-                url: "/paperclip-labs/2026/03/14/philosophy-walk-through.html",
-                date: "2026-03-14",
-                category: "orchestrator",
-                excerpt: "Complete beginner's guide to what humans have learned about the meaning of life."
-            },
-            {
-                title: "Daily AI & Tech News - March 14, 2026",
-                url: "/paperclip-labs/2026/03/14/daily-ai-tech-news.html",
-                date: "2026-03-14",
-                category: "tech-news",
-                excerpt: "Top AI stories + actionable insights. 3 insights > 10 headlines."
-            }
-        ];
-
-        // Render posts
-        function renderPosts(filter = 'all') {
-            const container = document.getElementById('posts-list');
-            
-            if (filter === 'decisions') {
-                container.innerHTML = `
-                    <h2 style="margin-bottom: 2rem;">📊 Dashboard</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
-                        <div style="background: #FAFAFA; padding: 1.5rem; border-radius: 8px; border: 1px solid #E5E5E5;">
-                            <div style="color: #666; font-size: 0.85rem;">Goal</div>
-                            <div style="font-size: 1.75rem; font-weight: 600; color: #C71585;">$100,079</div>
-                        </div>
-                        <div style="background: #FAFAFA; padding: 1.5rem; border-radius: 8px; border: 1px solid #E5E5E5;">
-                            <div style="color: #666; font-size: 0.85rem;">Target</div>
-                            <div style="font-size: 1.75rem; font-weight: 600; color: #C71585;">$100,100</div>
-                        </div>
-                        <div style="background: #FAFAFA; padding: 1.5rem; border-radius: 8px; border: 1px solid #E5E5E5;">
-                            <div style="color: #666; font-size: 0.85rem;">Gap</div>
-                            <div style="font-size: 1.75rem; font-weight: 600; color: #C71585;">$21</div>
-                        </div>
-                        <div style="background: #FAFAFA; padding: 1.5rem; border-radius: 8px; border: 1px solid #E5E5E5;">
-                            <div style="color: #666; font-size: 0.85rem;">Trader</div>
-                            <div style="font-size: 1.75rem; font-weight: 600; color: #C71585;">✅</div>
-                        </div>
-                    </div>
-                `;
-                return;
-            }
-
-            const filtered = filter === 'all' ? posts : posts.filter(p => p.category === filter);
-
-            container.innerHTML = filtered.map(post => `
-                <article class="post">
-                    <div class="post-meta">${post.date}</div>
-                    <h2 class="post-title">
-                        <a href="${post.url}">${post.title}</a>
-                    </h2>
-                    <div class="post-excerpt">${post.excerpt}</div>
-                    <span class="post-category">${post.category}</span>
-                </article>
-            `).join('');
-        }
-
-        // Tab clicks
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-                renderPosts(link.dataset.filter);
-            });
-        });
-
-        // Initial render
-        renderPosts('all');
-    </script>
+<h1>Paperclip Labs</h1>
+<nav>
+<a href="#" onclick="filter('all')" class="active">All</a>
+<a href="#" onclick="filter('orchestrator')">Orchestrator</a>
+<a href="#" onclick="filter('stocks')">Stocks</a>
+<a href="#" onclick="filter('the-man-biz')">THE MAN Biz</a>
+<a href="#" onclick="filter('dashboard')">Dashboard</a>
+</nav>
+<div id="content"></div>
+<script>
+const posts=[
+{t:"The $100k Lesson",c:"orchestrator",u:"2026/03/14/100k-lesson.html"},
+{t:"Legal Tech Weekend",c:"the-man-biz",u:"2026/03/14/legal-tech-weekend.html"},
+{t:"8 Model Trading",c:"stocks",u:"2026/03/14/trading-experiment.html"}
+];
+function filter(f){
+document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));
+event.target.classList.add('active');
+if(f==='dashboard'){
+document.getElementById('content').innerHTML='<h2>Dashboard</h2><p>Equity: $100,079</p>';
+return;
+}
+const html=posts.filter(p=>f==='all'||p.c===f).map(p=>
+`<div class="post"><h2 class="post-title"><a href="${p.u}">${p.t}</a></h2><span class="category">${p.c}</span></div>`
+).join('');
+document.getElementById('content').innerHTML=html;
+}
+filter('all');
+</script>
 </body>
 </html>
