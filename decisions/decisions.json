@@ -1,6 +1,14 @@
 {
   "decisions": [
     {
+      "timestamp": "2026-03-14 04:06 UTC",
+      "title": "\u23ed\ufe0f Security Mission Deferred",
+      "tags": [
+        "decision"
+      ],
+      "content": "THE GROOT wants to focus on other things. Skipping security hardening for now. Focusing on: (1) Fix failing trader models, (2) Write valuable blog post, (3) Build legal vertical demo, (4) Agent welfare system. Will revisit security when time is right."
+    },
+    {
       "timestamp": "2026-03-14 03:54 UTC",
       "title": "\ud83c\udf93 Critical Lesson: Anomaly Detection",
       "tags": [
