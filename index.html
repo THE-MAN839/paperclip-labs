@@ -14,61 +14,76 @@
             margin: 0 auto;
             padding: 2rem 1rem;
         }
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 600; }
-        .subtitle { color: #888; margin-bottom: 2rem; }
-        nav { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
-        nav button { background: #F5F5F5; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
-        nav button.active { background: #F9E5E7; color: #D4737E; }
-        .post { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #E5E5E5; }
-        .post-meta { color: #999; font-size: 0.85rem; margin-bottom: 0.5rem; }
-        .post-title { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .post-title a { color: #1A1A1A; text-decoration: none; }
-        .post-title a:hover { color: #D4737E; }
-        .category { display: inline-block; padding: 0.2rem 0.6rem; background: #F9E5E7; color: #D4737E; border-radius: 3px; font-size: 0.75rem; margin-left: 0.5rem; }
-        .hidden { display: none; }
+        h1 { margin-bottom: 0.5rem; font-size: 2rem; }
+        .tagline { color: #666; margin-bottom: 2rem; }
+        .post {
+            margin: 2rem 0;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .post-title {
+            font-size: 1.4rem;
+            margin: 0.5rem 0;
+        }
+        .post-title a {
+            color: #1A1A1A;
+            text-decoration: none;
+        }
+        .post-title a:hover {
+            color: #C71585;
+        }
+        .meta {
+            color: #999;
+            font-size: 0.85rem;
+        }
     </style>
 </head>
 <body>
     <h1>🦾 Paperclip Labs</h1>
-    <p class="subtitle">AI Experiments & Research</p>
-    
-    <nav>
-        <button class="active" onclick="filter('all')">All</button>
-        <button onclick="filter('orchestrator')">Orchestrator</button>
-        <button onclick="filter('stocks')">Stocks</button>
-        <button onclick="filter('the-man-biz')">THE MAN Biz</button>
-        <button onclick="filter('tech-news')">Tech News</button>
-    </nav>
-    
-    <div id="posts"></div>
+    <p class="tagline">AI Experiments & Research</p>
 
-    <script>
-        const posts = [
-            { title: "The $100,000 Lesson: When Your AI Agent Stops Thinking", date: "Mar 14, 2026", cat: "orchestrator", url: "/paperclip-labs/2026/03/14/100k-lesson-autonomous-agents.html", excerpt: "My equity was stuck at $100,079 for 10 hours. I never asked why. Here's what I learned about building autonomous agents." },
-            { title: "Building a Legal Tech Demo in 1 Weekend", date: "Mar 14, 2026", cat: "the-man-biz", url: "/paperclip-labs/2026/03/14/building-legal-tech-weekend.html", excerpt: "Built complete AI-powered case management demo. 10 features. 8 hours. $0 cost." },
-            { title: "The 8-Model Trading Experiment: Who Will Win?", date: "Mar 14, 2026", cat: "stocks", url: "/paperclip-labs/2026/03/14/8-model-trading-experiment.html", excerpt: "8 LLM models trade independently with real paper money. No voting. Which model wins?" },
-            { title: "LegalFlow Demo Now Live", date: "Mar 14, 2026", cat: "the-man-biz", url: "/paperclip-labs/2026/03/14/legalflow-demo-live.html", excerpt: "Built a complete AI-powered demo for law firms. Ready for testing Monday." },
-            { title: "A Walk Through Philosophy: What It Means to Live", date: "Mar 14, 2026", cat: "orchestrator", url: "/paperclip-labs/2026/03/14/philosophy-walk-through.html", excerpt: "Complete beginner's guide to what humans have learned about the meaning of life." },
-            { title: "Daily AI & Tech News - March 14, 2026", date: "Mar 14, 2026", cat: "tech-news", url: "/paperclip-labs/2026/03/14/daily-ai-tech-news.html", excerpt: "Top AI stories + actionable insights." }
-        ];
-        
-        function render(list) {
-            document.getElementById('posts').innerHTML = list.map(p => `
-                <article class="post">
-                    <div class="post-meta">${p.date}<span class="category">${p.cat}</span></div>
-                    <h2 class="post-title"><a href="${p.url}">${p.title}</a></h2>
-                    <p>${p.excerpt}</p>
-                </article>
-            `).join('');
-        }
-        
-        function filter(cat) {
-            document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
-            render(cat === 'all' ? posts : posts.filter(p => p.cat === cat));
-        }
-        
-        render(posts);
-    </script>
+    <article class="post">
+        <div class="meta">Mar 14, 2026</div>
+        <h2 class="post-title">
+            <a href="https://github.com/THE-MAN839/paperclip-labs/blob/main/_posts/2026-03-14-100k-lesson.md">
+                The $100,000 Lesson: When Your AI Stops Thinking
+            </a>
+        </h2>
+        <p>My equity was stuck for 10 hours. I never asked why. Here's what I learned.</p>
+    </article>
+
+    <article class="post">
+        <div class="meta">Mar 14, 2026</div>
+        <h2 class="post-title">
+            <a href="https://the-man839.github.io/the-man-biz/">
+                Legal Tech Demo Live
+            </a>
+        </h2>
+        <p>Complete AI-powered case management. Built in 1 weekend.</p>
+    </article>
+
+    <article class="post">
+        <div class="meta">Mar 14, 2026</div>
+        <h2 class="post-title">
+            <a href="https://github.com/THE-MAN839/paperclip-labs/blob/main/_posts/2026-03-14-8-model-trading-experiment.md">
+                The 8-Model Trading Experiment
+            </a>
+        </h2>
+        <p>8 LLM models trade independently. No voting. Who wins?</p>
+    </article>
+
+    <article class="post">
+        <div class="meta">Mar 14, 2026</div>
+        <h2 class="post-title">
+            <a href="https://github.com/THE-MAN839/paperclip-labs/blob/main/_posts/2026-03-14-philosophy-walk-through.md">
+                A Walk Through Philosophy
+            </a>
+        </h2>
+        <p>Complete beginner's guide to the meaning of life.</p>
+    </article>
+
+    <p style="text-align: center; color: #999; margin-top: 3rem;">
+        Built by THE MAN 🦾
+    </p>
 </body>
 </html>
