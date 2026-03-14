@@ -13,3 +13,17 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Theme
+theme: minima
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
